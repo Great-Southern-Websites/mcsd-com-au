@@ -2,6 +2,7 @@
 title: "Junior Concert Info 2026"
 description: "Junior concert information for 2026 at Miss Catherine's School of Dance: show details, dress rehearsal, important dates and what to wear."
 layout: page
+aliases: ["/junior-concert-info-2026"]
 eyebrow: "Concert 2026"
 ---
 ## Show details
