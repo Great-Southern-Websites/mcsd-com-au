@@ -111,6 +111,7 @@ p { margin: 0 0 1rem; }
 .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
 .hero-grid { display: grid; gap: 2rem; align-items: center; }
 @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.05fr 0.95fr; } }
+.hero-image { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
 .video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--primary-deep); }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .status-banner { background: var(--primary); color: var(--on-primary); }
