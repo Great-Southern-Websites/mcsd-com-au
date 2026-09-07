@@ -1,16 +1,28 @@
 {@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+<div class="announce"><a href="{=site.url('enrolments')}">2027 new student enrolments open January</a></div>
 <header class="site-header">
   <div class="container bar">
     <a class="brand" href="{=site.url}">
-      <!-- BUILDER: replace with the logo image (public/images/logo.*) or a wordmark -->
-      <span class="brand-name">Miss Catherine's School of Dance</span>
+      <img src="{=site.url('images/logo.png')}" alt="Miss Catherine's School of Dance" width="561" height="120">
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle menu">
     <label for="nav-toggle" class="nav-toggle"><span></span></label>
     <nav class="site-nav" aria-label="Main navigation">
       <ul>
-        <!-- BUILDER: one <li> per page, mirroring the original site's navigation -->
         <li><a href="{=site.url}">Home</a></li>
+        <li><a href="{=site.url('enrolments')}">Enrolments</a></li>
+        <li><a href="{=site.url('what-to-wear')}">What to Wear</a></li>
+        <li><a href="{=site.url('timetable-fees')}">Timetable + Fees</a></li>
+        <li><a href="{=site.url('location')}">Location</a></li>
+        <li><a href="{=site.url('photos')}">Photos</a></li>
+        <li class="has-sub"><a href="{=site.url('concert')}">Concert 2026</a>
+          <ul>
+            <li><a href="{=site.url('concert')}">Concert Info 2026</a></li>
+            <li><a href="{=site.url('junior-concert-info')}">Junior Concert Info 2026</a></li>
+            <li><a href="{=site.url('seniors-info')}">Seniors Info</a></li>
+            <li><a href="{=site.url('concert')}#costume-fees">Pay Costume Fees</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>
