@@ -72,3 +72,91 @@ layout: default
     </ul>
   </div>
 </section>
+
+<dialog class="lightbox" aria-label="Photo viewer">
+  <div class="lightbox-frame">
+    <button type="button" class="lightbox-btn lightbox-close" data-lightbox="close" aria-label="Close photo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-prev" data-lightbox="prev" aria-label="Previous photo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <img class="lightbox-img" src="" alt="">
+    <button type="button" class="lightbox-btn lightbox-next" data-lightbox="next" aria-label="Next photo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <p class="lightbox-count" aria-live="polite"></p>
+  </div>
+</dialog>
+
+<script>{|
+  (function () {
+    var dialog = document.querySelector('.lightbox');
+    if (!dialog || typeof dialog.showModal !== 'function') { return; }
+    var links = Array.prototype.slice.call(document.querySelectorAll('.gallery a'));
+    if (!links.length) { return; }
+    var img = dialog.querySelector('.lightbox-img');
+    var count = dialog.querySelector('.lightbox-count');
+    var current = 0;
+    var startX = null;
+
+    function show(i) {
+      current = (i + links.length) % links.length;
+      var thumb = links[current].querySelector('img');
+      img.src = links[current].href;
+      img.alt = thumb ? thumb.alt : '';
+      count.textContent = (current + 1) + ' of ' + links.length;
+      var ahead = new Image();
+      ahead.src = links[(current + 1) % links.length].href;
+      var behind = new Image();
+      behind.src = links[(current - 1 + links.length) % links.length].href;
+    }
+
+    function open(i) {
+      show(i);
+      document.body.classList.add('lightbox-open');
+      dialog.showModal();
+    }
+
+    links.forEach(function (link, i) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        open(i);
+      });
+    });
+
+    dialog.addEventListener('click', function (e) {
+      var action = e.target.closest('[data-lightbox]');
+      if (action) {
+        var what = action.getAttribute('data-lightbox');
+        if (what === 'close') { dialog.close(); }
+        if (what === 'prev') { show(current - 1); }
+        if (what === 'next') { show(current + 1); }
+        return;
+      }
+      if (e.target === dialog || e.target.classList.contains('lightbox-frame')) { dialog.close(); }
+    });
+
+    dialog.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1); }
+    });
+
+    dialog.addEventListener('touchstart', function (e) {
+      startX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    dialog.addEventListener('touchend', function (e) {
+      if (startX === null) { return; }
+      var dx = e.changedTouches[0].clientX - startX;
+      startX = null;
+      if (dx > 50) { show(current - 1); }
+      if (dx < -50) { show(current + 1); }
+    }, { passive: true });
+
+    dialog.addEventListener('close', function () {
+      document.body.classList.remove('lightbox-open');
+      img.src = '';
+      links[current].focus();
+    });
+  })();
+|}</script>

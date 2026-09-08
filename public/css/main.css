@@ -210,6 +210,26 @@ p { margin: 0 0 1rem; }
 .gallery-square img { aspect-ratio: 1 / 1; }
 .gallery a:hover img { opacity: 0.92; }
 
+/* ---- photo lightbox (photos page) ---------------------------------------- */
+.lightbox { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: transparent; color: #FFFFFF; }
+.lightbox::backdrop { background: rgba(42, 18, 24, 0.92); }
+.lightbox-frame { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.lightbox-img { max-width: calc(100vw - 1.5rem); max-height: calc(100vh - 8rem); width: auto; height: auto; object-fit: contain; border-radius: var(--radius); box-shadow: var(--shadow); }
+.lightbox-btn { position: absolute; display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; padding: 0; border: 0; border-radius: 999px; background: rgba(255, 255, 255, 0.14); color: #FFFFFF; cursor: pointer; }
+.lightbox-btn:hover { background: var(--accent); color: var(--accent-ink); }
+.lightbox-btn:focus-visible { outline: 3px solid #FFFFFF; outline-offset: 2px; }
+.lightbox-close { top: 0.75rem; right: 0.75rem; }
+.lightbox-prev { left: 0.75rem; bottom: 1.25rem; }
+.lightbox-next { right: 0.75rem; bottom: 1.25rem; }
+.lightbox-count { position: absolute; bottom: 1.75rem; left: 50%; transform: translateX(-50%); margin: 0; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.04em; }
+@media (min-width: 720px) {
+  .lightbox-img { max-width: calc(100vw - 9rem); max-height: calc(100vh - 4rem); }
+  .lightbox-prev { left: 1.25rem; top: 50%; bottom: auto; transform: translateY(-50%); }
+  .lightbox-next { right: 1.25rem; top: 50%; bottom: auto; transform: translateY(-50%); }
+  .lightbox-count { bottom: 1rem; }
+}
+body.lightbox-open { overflow: hidden; }
+
 /* ---- prose (markdown pages) --------------------------------------------- */
 .prose { max-width: 48rem; }
 .prose h2 { margin-top: 2rem; }
