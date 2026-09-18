@@ -1,0 +1,68 @@
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+<!-- Structured data for search engines (schema.org): one DanceSchool per studio. -->
+<script type="application/ld+json">
+{|{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "DanceSchool",
+      "@id": "|}{=site.url.absolute}{|#mornington",
+      "name": "Miss Catherine's School of Dance, Mornington",
+      "alternateName": "MCSD",
+      "url": "|}{=site.url.absolute}{|",
+      "logo": "|}{=site.url('images/logo.svg').absolute}{|",
+      "image": "|}{=site.url('images/og-image.jpg').absolute}{|",
+      "description": "Ballet, tap and jazz classes for children and teens in Mornington and Seaford, with annual concerts and ballet exams, pay as you go.",
+      "email": "catherine@mcsd.com.au",
+      "priceRange": "$15 to $25 per class",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6 Albert Street",
+        "addressLocality": "Mornington",
+        "addressRegion": "VIC",
+        "postalCode": "3931",
+        "addressCountry": "AU"
+      },
+      "areaServed": "Mornington Peninsula",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100083021546427",
+        "https://www.instagram.com/misscatherinesschoolofdance__/"
+      ],
+      "potentialAction": {
+        "@type": "RegisterAction",
+        "name": "Enrol",
+        "target": "|}{=site.url('enrolments').absolute}{|"
+      }
+    },
+    {
+      "@type": "DanceSchool",
+      "@id": "|}{=site.url.absolute}{|#seaford",
+      "name": "Miss Catherine's School of Dance, Seaford",
+      "alternateName": "MCSD",
+      "url": "|}{=site.url('location').absolute}{|",
+      "logo": "|}{=site.url('images/logo.svg').absolute}{|",
+      "image": "|}{=site.url('images/og-image.jpg').absolute}{|",
+      "description": "Ballet, tap and jazz classes at the Seaford studio of Miss Catherine's School of Dance, pay as you go.",
+      "email": "catherine@mcsd.com.au",
+      "priceRange": "$15 to $25 per class",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "224 Seaford Road",
+        "addressLocality": "Seaford",
+        "addressRegion": "VIC",
+        "postalCode": "3198",
+        "addressCountry": "AU"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100083021546427",
+        "https://www.instagram.com/misscatherinesschoolofdance__/"
+      ],
+      "potentialAction": {
+        "@type": "RegisterAction",
+        "name": "Enrol",
+        "target": "|}{=site.url('enrolments').absolute}{|"
+      }
+    }
+  ]
+}|}
+</script>

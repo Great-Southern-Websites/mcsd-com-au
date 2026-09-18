@@ -1,11 +1,13 @@
 ---
 title: "Page not found"
 layout: page
-description: "That page does not exist."
+description: "Sorry, that page does not exist on the Miss Catherine's School of Dance site. Use the menu to find enrolments, fees and concert information."
+sitemap: false
+robots: "noindex"
 # GitHub Pages serves a custom 404 only from a file called 404.html at the root
 # of the published site. Without this, Roq's pretty URLs publish the page as
 # 404/index.html, GitHub never finds it and every missing page gets GitHub's
 # own grey screen instead of the site's.
 link: /404.html
 ---
-<p>Sorry, we could not find that page. <a href="{=site.url}">Go to the home page</a> or pick a page from the menu.</p>
+<p>Sorry, we could not find that page. <a href="{=site.url}">Go to the home page</a>, or try <a href="{=site.url('enrolments')}">Enrolments</a>, <a href="{=site.url('timetable-fees')}">Timetable &amp; Fees</a> or <a href="{=site.url('concert-info')}">Concert Info 2026</a>.</p>

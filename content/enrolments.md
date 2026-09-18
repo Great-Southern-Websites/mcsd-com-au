@@ -1,8 +1,7 @@
 ---
 title: "Enrolments"
-description: "Enrolments for 2026 are now closed. Re-enrolments for current students take place late in 2026, and places for new students open in January 2027."
+description: "Enrolment dates for Miss Catherine's School of Dance: re-enrolments for current students late in the year, new student places from January."
 layout: page
-eyebrow: "Join MCSD"
 ---
 ## Enrolments for 2026 are now closed
 
@@ -14,14 +13,10 @@ Any remaining places will then open to new students for 2027, subject to class a
 
 2027 enrolment information and available classes will be published here in January.
 
-## Before you enrol
+## In the meantime
 
-- See the [Timetable + Fees]({=site.url('timetable-fees')}) page for class days, times and pay-as-you-go pricing.
-- Read [What to Wear]({=site.url('what-to-wear')}) for the class uniform.
-- Find our Mornington and Seaford studios on the [Location]({=site.url('location')}) page.
+- See the [current class days and times and the fees]({=site.url('timetable-fees')}).
+- Find the [Mornington and Seaford studios]({=site.url('location')}).
+- Read [what to wear to class]({=site.url('what-to-wear')}).
 
-## Questions
-
-Email Miss Catherine at [catherine@mcsd.com.au](mailto:catherine@mcsd.com.au).
-
-<p class="btn-row"><a class="btn btn-primary" href="mailto:catherine@mcsd.com.au">Email Miss Catherine</a></p>
+For any questions, contact Miss Catherine at [catherine@mcsd.com.au](mailto:catherine@mcsd.com.au).

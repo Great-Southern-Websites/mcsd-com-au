@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://live.greatsouthern.website/mcsd-com-au/sitemap.xml

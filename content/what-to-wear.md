@@ -1,21 +1,23 @@
 ---
 title: "What to Wear"
-description: "Uniform guidelines for ballet, tap and jazz classes at Miss Catherine's School of Dance."
+description: "The class uniform policy at Miss Catherine's School of Dance, kept simple and accessible for every family on the Mornington Peninsula."
 layout: page
-eyebrow: "Uniform"
 ---
 ## 2026 dance class uniform details
 
 At Miss Catherine's School of Dance, I'm proud to foster a welcoming and inclusive community on the Mornington Peninsula. To keep things simple and accessible for all families, I've designed a straightforward uniform policy for dance classes.
 
+<figure>
+<img src="{=site.url('images/mornington-class-barre-tutus.jpg')}" alt="Students in pink leotards and tutus practising at the barre in the studio" width="1600" height="1067" loading="lazy">
+<figcaption>At the barre in class.</figcaption>
+</figure>
+
 ## Senior students
 
-Mornington senior students wear the black leotard chosen for the 2026 "Chess" performance. The same leotard can be worn as your Seniors class uniform throughout 2027. Details and the purchase link are on the [Seniors Info]({=site.url('seniors-info')}) page.
+Mornington senior students need the black leotard chosen for the 2026 Chess performance. It can also be worn as your Seniors class uniform throughout 2027. The details and the link to purchase it are on the [Seniors Info page]({=site.url('seniors-info')}).
 
 ## Concert dress
 
-What to wear to the dress rehearsal and concert, including tights, shoes, hair and costume, is listed on the [Junior Concert Info]({=site.url('junior-concert-info')}) page.
+What to wear to the dress rehearsal and concert is listed on each concert's page. Start with [Concert Info 2026]({=site.url('concert-info')}) or go straight to the [Junior Concert]({=site.url('junior-concert-info')}) details.
 
-## Questions
-
-If you are unsure what your child needs for class, speak with our team at the desk or email Miss Catherine at [catherine@mcsd.com.au](mailto:catherine@mcsd.com.au).
+For any uniform questions, contact Miss Catherine at [catherine@mcsd.com.au](mailto:catherine@mcsd.com.au).
